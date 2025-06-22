@@ -9,7 +9,8 @@ const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 const dbName = 'passop';
 const app = express();
-const port = 3000;
+
+const port = process.env.port || 3000;
 
 // Enable CORS for your frontend origin
 app.use(cors({
