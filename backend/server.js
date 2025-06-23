@@ -5,7 +5,7 @@ const cors = require('cors');
 
 dotenv.config();
 
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGO_URL;
 const client = new MongoClient(url);
 const dbName = 'passop';
 const app = express();
